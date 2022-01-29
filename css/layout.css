@@ -26,6 +26,20 @@
 	margin: -100px 0 0 -100px;
 }
 
+#video_back video, #video_back .overlay_image, #video_back .overlay {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%; 
+	min-height: 100%;
+}
+#video_back .overlay {
+	background: rgba(0, 0, 0, 0.2);
+}
+#video_back .overlay_image {
+	display: none;
+}
+
 
 /* #Animation
 ================================================== */
@@ -2610,7 +2624,13 @@ a.link-blog:hover{
 }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 479px) {	
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+	#video_back video{
+		display: none;
+	}
+	#video_back .overlay_image {
+		display: block;
+	}
 	h1 { font-size: 25px; line-height:27px;}
 #profile .title .angle  h1,
 #team .title .angle  h1,
