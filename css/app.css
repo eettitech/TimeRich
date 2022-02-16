@@ -1,0 +1,52 @@
+.sspt .nav {
+    border-bottom: 1px solid #ddd;
+}
+
+.sspt .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #a6990d !important;
+    background-color: transparent !important;
+    border-bottom: 3px solid #a6990d;
+    border-radius: 0;
+}
+
+.sspt .nav-pills .nav-link:hover {
+    color: #ebd80c !important;
+    border-bottom: 3px solid #ebd80c;
+    border-radius: 0;
+}
+
+.sspt a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+.mb-5 {
+        margin-bottom: 15px !important;
+}
+
+.fdc {
+    flex-direction: column;
+}
+
+.fdc .nav-item {
+    /*border-bottom: .1px solid #ddd;*/
+    /* padding-bottom: 10px; */
+    margin-bottom: 2px;
+    /*margin-top: 5px;*/
+}
+
+.fdc .nav-link {
+    padding: .8rem 0rem;     
+    color: #fdf1f1;
+}
+.btitle {
+    /*font-family: 'Poppins', sans-serif;*/
+    color: #fdf1f1
+    font-weight: 600;
+}
+
+
+/*Contact Map
+===============
+Start*/

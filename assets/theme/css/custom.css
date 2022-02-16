@@ -1,0 +1,31 @@
+.treebox {
+	background-color: rgba(255,255,255,0.1);
+	padding: 10px 15px;
+    z-index: 100;
+    border-radius: 4px;
+    color: #fff;
+}
+.treebox.shad {
+	border: 1px solid gold;
+	box-shadow: 0 1px 3px #666;
+	padding: 10px 40px;
+}
+.inline {
+	display: inline-block;
+}
+.small-line {
+	height: 40px;
+	position: relative;
+}
+.small-line:before {
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 40px;
+	background-color: #999;
+	z-index: -1;
+	top: 0;
+}
+a:hover {
+	text-decoration: none;
+}

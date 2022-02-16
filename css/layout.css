@@ -794,7 +794,7 @@
 	}
 
 	#navigation ul li:hover a {
-		color: #999;
+		color: #857b15;
 	}
 	
 @media only screen and (max-width: 959px) {
@@ -821,6 +821,7 @@
 	}
 	
 	#navigation .current {
+		color: #a6990d !important;
 		display: block!important;
 	}
 	
@@ -997,7 +998,7 @@
 	margin: 0 auto;
 	width: 100%;
 	background:  url(../images/debut_dark.png) repeat;
-	padding-top:40px;
+	/*padding-top:40px;*/
 	padding-bottom:40px;
 }
 .background-pat1{
