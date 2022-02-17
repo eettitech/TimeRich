@@ -1229,6 +1229,7 @@ textArea.form-flat {
 .my-profile .my-desc .inner-text {
   max-width: 585px;
   padding: 40px;
+  
 }
 @media (max-width: 880px) {
   .my-profile .my-desc .inner-text {
