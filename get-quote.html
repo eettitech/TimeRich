@@ -24,6 +24,7 @@
 
 	<!-- For Form -->
 	<link rel="stylesheet" href="css/formdesign.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	
     <!--[if lte IE 8]>
         <script src="js/html5.js"></script>
@@ -95,12 +96,44 @@
                           <fieldset>
                               <div class="form-card">
                                   <h2 class="fs-title">General Information</h2> 
-                                  <input type="text" name="fname" placeholder="Name*" /> 
+
+                                
+
+                               <!--  <div class="w3-row">
+                                <div class="w3-third">
+                                  <input type="text" name="phno_2" placeholder="Contact Number*" />
+                                </div>
+                                <div class="w3-twothird w3-container">
+                                  <input type="text" name="phno_2" placeholder="Contact Number*" />
+                                </div>
+                                </div> -->
+
+                                    <input type="text" name="fname" placeholder="Name*" /> 
                                     <input type="text" name="lname" placeholder="Title*" /> 
                                     <input type="text" name="phno" placeholder="Company Name*" /> 
-                                    <input type="text" name="phno_2" placeholder="Contact Number*" />
+                                    <div class="w3-row">
+                                  <div class="w3-col" style="width:150px">
+                                    <input type="text" name="phno_2" placeholder="Country Code*" /></div>
+                                  <div class="w3-rest w3-container">
+                                    <input type="text" name="phno_2" placeholder="Contact Number*" /></div>
+                                </div>
                                     <input type="email" name="email" placeholder="Email Id" />
-                                    <input type="text" name="ayou" placeholder="Are You*" /> 
+                                    <!-- <input type="text" name="ayou" placeholder="Are You*" />  -->
+
+                                    <div class="w3-dropdown-hover w3-gray">
+                                      <button class="w3-button">Are You*</button>
+                                      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                                        <a href="#" class="w3-bar-item w3-button">Manufacturer</a>
+                                        <a href="#" class="w3-bar-item w3-button">Freight Forwarder</a>
+                                        <a href="#" class="w3-bar-item w3-button">Exporter</a>
+                                        <a href="#" class="w3-bar-item w3-button">Importer</a>
+                                        <a href="#" class="w3-bar-item w3-button">Agent</a>
+                                        <a href="#" class="w3-bar-item w3-button">Individual</a>
+                                        <a href="#" class="w3-bar-item w3-button">Other</a>
+                                      </div>
+                                    </div>
+
+                            
                                 </div> 
                               	  <input type="button" name="next" class="next action-button" value="Next Step" />
                             </fieldset>
