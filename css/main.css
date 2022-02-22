@@ -15543,20 +15543,22 @@ textarea.custom-input {
 @media (min-width: 768px) {
   .contacts__contact {
     position: relative;
-    padding: 40px;
+    padding: 20px;
   }
 }
 
 @media (min-width: 992px) {
   .contacts__contact {
-    padding: 60px;
+    /*padding: 60px;*/
+    margin: 40px;
   }
 }
 
 @media (min-width: 1200px) {
   .contacts__contact {
-    max-width: 595px;
-    padding: 78px 83px 90px 100px;
+    max-width: 500px;
+    /*padding: 78px 83px 90px 100px;*/
+    margin: 40px;
   }
 }
 
