@@ -56,7 +56,7 @@ html {
     padding: 10px 8px 4px 8px;
     border: none;
     border-bottom: 1px solid #ccc;
-    border-radius: 0px;
+    border-radius: 5px;
     margin-bottom: 15px;
     margin-top: 2px;
     /*width: 100%;*/
@@ -238,23 +238,22 @@ select.list-dt:focus {
 }
 
 
-<!-- CheckBox -->
-/* The container */
-/*.container {
+/* The container_check */
+.container_check {
   display: block;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}*/
+}
 
 /* Hide the browser's default checkbox */
-.container input {
+.container_check input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -273,13 +272,13 @@ select.list-dt:focus {
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.container_check:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #2196F3;
+.container_check input:checked ~ .checkmark {
+  background-color: #a6990d;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -290,12 +289,12 @@ select.list-dt:focus {
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.container_check input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.container .checkmark:after {
+.container_check .checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -305,4 +304,85 @@ select.list-dt:focus {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+/* Create four equal columns that floats next to each other */
+.column_checks {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  border-radius: 5px;
+  /*height: 300px;*/
+   /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row_checks:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The container_radio */
+.container_radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container_radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark_radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container_radio:hover input ~ .checkmark_radio {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container_radio input:checked ~ .checkmark_radio {
+  background-color: #a6990d;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark_radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container_radio input:checked ~ .checkmark_radio:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container_radio .checkmark_radio:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
 }

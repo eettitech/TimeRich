@@ -95,9 +95,7 @@
                             </fieldset> -->
                           <fieldset>
                               <div class="form-card">
-                                  <h2 class="fs-title">General Information</h2> 
-
-                                
+                                  <h4 class="fs-title">General Information</h4> 
 
                                <!--  <div class="w3-row">
                                 <div class="w3-third">
@@ -117,21 +115,20 @@
                                   <div class="w3-rest w3-container">
                                     <input type="text" name="phno_2" placeholder="Contact Number*" /></div>
                                 </div>
-                                    <input type="email" name="email" placeholder="Email Id" />
+                                    <input type="email" name="email" placeholder="Email Id*" />
                                     <!-- <input type="text" name="ayou" placeholder="Are You*" />  -->
 
-                                    <div class="w3-dropdown-hover w3-gray">
-                                      <button class="w3-button">Are You*</button>
-                                      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                                        <a href="#" class="w3-bar-item w3-button">Manufacturer</a>
-                                        <a href="#" class="w3-bar-item w3-button">Freight Forwarder</a>
-                                        <a href="#" class="w3-bar-item w3-button">Exporter</a>
-                                        <a href="#" class="w3-bar-item w3-button">Importer</a>
-                                        <a href="#" class="w3-bar-item w3-button">Agent</a>
-                                        <a href="#" class="w3-bar-item w3-button">Individual</a>
-                                        <a href="#" class="w3-bar-item w3-button">Other</a>
-                                      </div>
-                                    </div>
+                                                                
+                                    <select class="form-select" style="font-size:16px; padding: 10px; background: rgba(0,0,0,.1);    border-bottom: 1px solid #ccc;  border-radius: 5px;" aria-label="Default select example">
+                                      <option selected>Are You*</option>
+                                      <option value="1">Manufacturer</option>
+                                      <option value="2">Freight Forwarder</option>
+                                      <option value="3">Exporter</option>
+                                      <option value="1">Importer</option>
+                                      <option value="2">Agent</option>
+                                      <option value="3">Individual</option>
+                                      <option value="1">Other</option>
+                                    </select>
 
                             
                                 </div> 
@@ -140,115 +137,171 @@
 
                             <fieldset>
                                 <div class="form-card">
-                                    <h2 class="fs-title">Service Needed</h2> 
-                                    <p>Please select the mode of shipment</p>
-                                    <input type="radio" id="html" name="fav_language" value="HTML">
-                                    <label for="html">AIR</label><br>
-                                    <input type="radio" id="css" name="fav_language" value="CSS">
-                                    <label for="css">SHIP</label><br>
-                                    
+                                    <h4 class="fs-title">Service Needed</h4> 
 
-                                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  									<label for="vehicle1"> Intl Freight Forwarding</label><br>
-  									<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-  									<label for="vehicle2"> Customs Clearence</label><br>
-  									<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-  									<label for="vehicle3"> Warehouse</label><br><br>
+                                    <p>Service Needed (check all that apply) *</p>
+                                    <div class="row_checks" style="background: rgba(0,0,0,.1); border-radius: 5px;margin-bottom: 10px;">
+                                      <div class="column_checks">
+                                        <label class="container_check">Intl Freight Forwarding
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                      </label>
+                                      <label class="container_check">Door to Door
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                      </label>
+                                      <label class="container_check">Other Allied Services
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                      </label>
+                                      </div>
+                                      <div class="column_checks">
+                                        <label class="container_check">Customs Clearence
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                      </label>
+                                      <label class="container_check">Supply Chain
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                      </label>
+                                      </div>
+                                      <div class="column_checks">
+                                        <label class="container_check">Warehouse
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                      </label>
+                                      <label class="container_check">Marine Insurance
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                      </label>
+                                      </div>
+                                      <div class="column_checks">
+                                        <label class="container_check">Transport
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                      </label>
+                                      <label class="container_check">Cross Trade
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                      </label>
+                                      </div>
+                                    </div>
 
-  									<label class="container">One
-  									<input type="checkbox" checked="checked">
-  									<span class="checkmark"></span>
-									</label>
-									<label class="container">Two
-  									<input type="checkbox">
-  									<span class="checkmark"></span>
-									</label>
-									<label class="container">Three
-  									<input type="checkbox">
-  									<span class="checkmark"></span>
-									</label>
-									<label class="container">Four
-  									<input type="checkbox">
-  									<span class="checkmark"></span>
-									</label>
+                                    <p>Package Information * please select</p>
+                                    <div class="row_checks" style="background: rgba(0,0,0,.1); border-radius: 5px; margin-bottom: 10px;">
+                                      <div class="column_checks">
+                                        <label class="container_radio">Unpacked
+                                          <input type="radio" name="radio">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                        <label class="container_radio">Palletized
+                                          <input type="radio" name="radio">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                        <label class="container_radio">Boxes
+                                          <input type="radio" name="radio">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                            <label class="container_radio">Crated
+                                              <input type="radio" name="radio">
+                                              <span class="checkmark_radio"></span>
+                                            </label>
+                                        
+                                      </div>
 
-                                    <input type="text" name="fname" placeholder="Name*" /> 
-                                    <input type="text" name="lname" placeholder="Title*" /> 
-                                    <input type="text" name="phno" placeholder="Company Name*" /> 
-                                    <input type="text" name="phno_2" placeholder="Contact Number*" />
-                                    <input type="email" name="email" placeholder="Email Id" />
+                                       <div class="column_checks">
+                                        <label class="container_radio">Cased
+                                          <input type="radio" name="radio">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                        <label class="container_radio">Cartons
+                                          <input type="radio" name="radio">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                        <label class="container_radio">Skid
+                                          <input type="radio" name="radio">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                        
+                                      </div>
+
+                                      <div class="column_checks">
+                                        <label class="container_radio">Container
+                                          <input type="radio" name="radio">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                        <label class="container_radio">Drums
+                                          <input type="radio" name="radio">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                        <label class="container_radio">Bundles
+                                          <input type="radio" name="radio">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                       
+                                      </div>
+
+                                      <div class="column_checks">
+                                        <label class="container_radio">Bales
+                                          <input type="radio"  name="radio">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                        <label class="container_radio">Rolls
+                                          <input type="radio" name="radio">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                        <label class="container_radio">Oversized
+                                          <input type="radio" name="radio">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                        
+                                      </div>
+
+                                      <input style="padding: 10px;" type="text" name="othertype" placeholder="If Other (Please Specify)" />
+                                     
+                                    </div>
+
 
                                 </div> 
                                 	<input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
                                 	<input type="button" name="next" class="next action-button" value="Next Step" />
                             </fieldset>
 
-                            <!-- <fieldset>
+                           
+							<fieldset>
                                 <div class="form-card">
-                                    <h2 class="fs-title">Payment Information</h2>
-                                    <div class="radio-group">
-                                        <div class='radio' data-value="credit"><img src="https://i.imgur.com/XzOzVHZ.jpg" width="200px" height="100px"></div>
-                                        <div class='radio' data-value="paypal"><img src="https://i.imgur.com/jXjwZlj.jpg" width="200px" height="100px"></div> <br>
-                                    </div> <label class="pay">Card Holder Name*</label> <input type="text" name="holdername" placeholder="" />
-                                    <div class="row">
-                                        <div class="col-9"> <label class="pay">Card Number*</label> <input type="text" name="cardno" placeholder="" /> </div>
-                                        <div class="col-3"> <label class="pay">CVC*</label> <input type="password" name="cvcpwd" placeholder="***" /> </div>
+                                    <h4 class="fs-title">PACKAGE INFORMATION</h4> 
+                                    <p>Commodity</p>
+                                    <input type="text" name="fname" placeholder="Description of Commodity*" />  
+
+                                <div class="row_checks">
+                                    <div class="column_checks">
+                                        <p>Weight (indicate type of measurement) *</p>
+                                        <label class="container_radio">Bales
+                                          <input type="radio"  name="radio">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                        <label class="container_radio">Rolls
+                                          <input type="radio" name="radio">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-3"> <label class="pay">Expiry Date*</label> </div>
-                                        <div class="col-9"> <select class="list-dt" id="month" name="expmonth">
-                                                <option selected>Month</option>
-                                                <option>January</option>
-                                                <option>February</option>
-                                                <option>March</option>
-                                                <option>April</option>
-                                                <option>May</option>
-                                                <option>June</option>
-                                                <option>July</option>
-                                                <option>August</option>
-                                                <option>September</option>
-                                                <option>October</option>
-                                                <option>November</option>
-                                                <option>December</option>
-                                            </select> <select class="list-dt" id="year" name="expyear">
-                                                <option selected>Year</option>
-                                            </select> </div>
+                                    <div class="column_checks">
+                                        <input style="padding: 10px;" type="text" name="othertype" placeholder="If Other (Please Specify)" />
                                     </div>
-                                </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Confirm" />
-                            </fieldset> -->
-								<fieldset>
-                                <div class="form-card">
-                                    <h2 class="fs-title">Package Information</h2>
-                                   <!--  <div class="radio-group">
-                                        <div class='radio' data-value="credit"><img src="https://i.imgur.com/XzOzVHZ.jpg" width="200px" height="100px"></div>
-                                        <div class='radio' data-value="paypal"><img src="https://i.imgur.com/jXjwZlj.jpg" width="200px" height="100px"></div> <br>
-                                    </div>  -->
-                                    <label class="pay">Card Holder Name*</label> <input type="text" name="holdername" placeholder="" />
-                                    <div class="row">
-                                        <div class="col-9"> <label class="pay">Card Number*</label> <input type="text" name="cardno" placeholder="" /> </div>
-                                        <div class="col-3"> <label class="pay">CVC*</label> <input type="password" name="cvcpwd" placeholder="***" /> </div>
+                                    <div class="column_checks">
+                                        <input type="button" name="next" class="next action-button" value="Next Step" />
                                     </div>
-                                    <div class="row">
-                                        <div class="col-3"> <label class="pay">Expiry Date*</label> </div>
-                                        <div class="col-9"> <select class="list-dt" id="month" name="expmonth">
-                                                <option selected>Month</option>
-                                                <option>January</option>
-                                                <option>February</option>
-                                                <option>March</option>
-                                                <option>April</option>
-                                                <option>May</option>
-                                                <option>June</option>
-                                                <option>July</option>
-                                                <option>August</option>
-                                                <option>September</option>
-                                                <option>October</option>
-                                                <option>November</option>
-                                                <option>December</option>
-                                            </select> <select class="list-dt" id="year" name="expyear">
-                                                <option selected>Year</option>
-                                            </select> </div>
+                                    <div class="column_checks">
+                                        <input type="button" name="next" class="next action-button" value="Next Step" />
                                     </div>
-                                </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Next" />
+                                </div>
+
+
+                                </div>
+
+                                
+
                             </fieldset>
 
                             <fieldset>
