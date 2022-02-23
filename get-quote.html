@@ -25,10 +25,15 @@
 	<!-- For Form -->
 	<link rel="stylesheet" href="css/formdesign.css"/>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 	
-    <!--[if lte IE 8]>
-        <script src="js/html5.js"></script>
-    <![endif]-->		
+      <!-- font awesome  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="static/css/AdminLTE.min.css" />
+
+    <!-- <script src="static/js/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 		
 	<!-- Favicons
 	================================================== -->
@@ -75,7 +80,7 @@
     <div class="row justify-content-center mt-0">
         <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
             <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                <h2><strong>Sign Up Your User Account</strong></h2>
+                <h4><strong>Get Quote</strong></h4>
                 <p>Fill all form field to go to next step</p>
                 <div class="row">
                     <div class="col-md-12 mx-0">
@@ -269,45 +274,148 @@
 
                            
 							<fieldset>
-                                <div class="form-card">
+                            <div class="form-card">
                                     <h4 class="fs-title">PACKAGE INFORMATION</h4> 
                                     <p>Commodity</p>
                                     <input type="text" name="fname" placeholder="Description of Commodity*" />  
 
                                 <div class="row_checks">
                                     <div class="column_checks">
-                                        <p>Weight (indicate type of measurement) *</p>
-                                        <label class="container_radio">Bales
-                                          <input type="radio"  name="radio">
+                                        <p>Weight*</p>
+                                        <label class="container_radio">Pounds
+                                          <input type="radio"  name="radio_weight">
                                           <span class="checkmark_radio"></span>
                                         </label>
-                                        <label class="container_radio">Rolls
-                                          <input type="radio" name="radio">
+                                        <label class="container_radio">Kilograms
+                                          <input type="radio" name="radio_weight">
                                           <span class="checkmark_radio"></span>
                                         </label>
                                     </div>
                                     <div class="column_checks">
-                                        <input style="padding: 10px;" type="text" name="othertype" placeholder="If Other (Please Specify)" />
+                                        <input style="padding: 10px;font-size: 12px;" type="text" name="othertype" placeholder="No. of packages*" />
+                                        <input style="padding: 10px;font-size: 12px;" type="text" name="othertype" placeholder="Total Weight*" />
+                                    </div>
+
+
+                                    <div class="column_checks">
+                                        <p>Hazardous / MCO *</p>
+                                        <input style="padding: 10px;font-size: 12px;" type="text" name="othertype" placeholder="If yes, Specify Its Nature*" />
+                                        
                                     </div>
                                     <div class="column_checks">
-                                        <input type="button" name="next" class="next action-button" value="Next Step" />
-                                    </div>
-                                    <div class="column_checks">
-                                        <input type="button" name="next" class="next action-button" value="Next Step" />
+                                        <label class="container_radio">Yes
+                                          <input type="radio"  name="radio_hm">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                        <label class="container_radio">No
+                                          <input type="radio" name="radio_hm">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
                                     </div>
                                 </div>
 
 
+                                <div class="row_checks">
+                                    <div class="w3-row">
+                                        <div class="w3-col" style="width:100px">
+                                            <p>Dimensions*</p>
+                                        </div>
+                                        <div class="w3-col" style="width:100px">
+                                            <label class="container_radio">Inches
+                                          <input type="radio"  name="radio_dim">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                        </div>
+                                        <div class="w3-col" style="width:100px">
+                                            <label class="container_radio">Centimeters
+                                          <input type="radio" name="radio_dim">
+                                          <span class="checkmark_radio"></span>
+                                        </label>
+                                        </div>
+                                    </div>
+
+                                    
+
+                                    <div class="form-group fieldGroup">
+                                            <div class="row_checks input-group">
+                                                <div class="column_checks">
+                                                <input type="text" name="length[]" class="form-control" placeholder="Enter Length"/>
+                                                </div>
+                                                <div class="column_checks">
+                                                <input type="text" name="width[]" class="form-control" placeholder="Enter Width"/>
+                                                </div>
+                                                <div class="column_checks">
+                                                <input type="text" name="height[]" class="form-control" placeholder="Enter Height"/>
+                                                </div>
+                                                <div class="column_checks" >
+                                                <div class="input-group-addon"> 
+                                                    <!-- <a href="javascript:void(0)" class="btn btn-success addMore"><span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> Add</a> -->
+
+                                                    <a href="javascript:void(0);" class="btn btn-success addMore"><img src="images/add-icon.png"/></a>
+                                                </div>
+                                            </div>
+                                    </div>
                                 </div>
 
-                                
+                                    <!-- <p>Commodity</p> -->
+                                    <input type="text" name="fname" placeholder="Total Invoice Value" /> 
 
+                                    </div>
+                            </div>
+
+                                <!-- copy of input fields group -->
+                                <div class="row_checks form-group fieldGroupCopy" style="display: none;">
+                                    <div class="input-group">
+                                        <div class="column_checks">
+                                        <input type="text" name="length[]" class="form-control" placeholder="Enter Length"/>
+                                        </div>
+                                        <div class="column_checks">
+                                        <input type="text" name="width[]" class="form-control" placeholder="Enter Width"/>
+                                        </div>
+                                        <div class="column_checks">
+                                        <input type="text" name="height[]" class="form-control" placeholder="Enter Height"/>
+                                        </div>
+                                        <div class="column_checks">
+                                        <div class="input-group-addon"> 
+                                            <!-- <a href="javascript:void(0)" class="btn btn-danger remove"><span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> Remove</a> -->
+                                            <a href="javascript:void(0);" class="btn btn-danger remove"><img src="images/remove-icon.png"/></a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
+                                    <input type="button" name="next" class="next action-button" value="Next Step" />
                             </fieldset>
 
                             <fieldset>
                                 <div class="form-card">
-                                    <h2 class="fs-title text-center">Feedback & Submit</h2> <br><br>
-                                    <div class="row justify-content-center">
+                                    <h4>Location & Submit</h4>
+                                    <div class="w3-row">
+                                      <div class="w3-col" style="width:50%">
+                                        <input type="text" name="phno_2" placeholder="Originating Port*" /></div>
+                                      <div class="w3-rest w3-container">
+                                        <input type="text" name="phno_2" placeholder="Destination Port*" /></div>
+                                    </div>
+
+                                    <div class="w3-row">
+                                      <div class="w3-col" style="width:50%">
+                                        <input type="text" name="phno_2" placeholder="Collecting point*" /></div>
+                                      <div class="w3-rest w3-container">
+                                        <input type="text" name="phno_2" placeholder="Delivery Point*" /></div>
+                                    </div>
+
+                                    <div class="w3-row">
+                                      <div class="w3-col" style="width:50%">
+                                        <input type="text" name="phno_2" placeholder="Movement Month*" /></div>
+                                      <div class="w3-rest w3-container">
+                                        <input type="text" name="phno_2" placeholder="Comments" /></div>
+                                    </div>
+
+                                    <p>Dimensions*</p>
+                                    <input type="text" name="phno_2" placeholder="Please Give Your Valuable Feedback" />
+                                    
+                                    <!-- <div class="row justify-content-center">
                                         <div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image" style="width:100px; height:100px"> </div>
                                     </div> <br><br>
                                     <div class="row justify-content-center">
@@ -315,10 +423,14 @@
                                             <h5>You Have Successfully Signed Up</h5>
                                             <input type="text" name="fname" placeholder="Feedback*" />
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Confirm" />
                             </fieldset>
+
+
+
+
                         </form>
                     </div>
                 </div>
@@ -401,7 +513,58 @@
 <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="js/template.js"></script> 
-<script type="text/javascript" src="js/formdesign.js"></script>  	  
+<script type="text/javascript" src="js/formdesign.js"></script>
+<!-- <script type="text/javascript" src="js/formdesign_multiplefield.js"></script>  	 -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   -->
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    //group add limit
+    var maxGroup = 10;
+    
+    //add more fields group
+    $(".addMore").click(function(){
+        if($('body').find('.fieldGroup').length < maxGroup){
+            var fieldHTML = '<div class="form-group fieldGroup">'+$(".fieldGroupCopy").html()+'</div>';
+            $('body').find('.fieldGroup:last').after(fieldHTML);
+        }else{
+            alert('Maximum '+maxGroup+' groups are allowed.');
+        }
+    });
+    
+    //remove fields group
+    $("body").on("click",".remove",function(){ 
+        $(this).parents(".fieldGroup").remove();
+    });
+});
+</script>
+
+<!-- <script type="text/javascript">
+$(document).ready(function(){
+    var maxField = 10; //Input fields increment limitation
+    var addButton = $('.add_button'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+    var fieldHTML = '<div><input type="text" name="field_name1[] & field_name2[] & field_name3[]" value=""/><a href="javascript:void(0);" class="remove_button"><img src="images/remove-icon.png"/></a></div>'; //New input field html 
+    var x = 3; //Initial field counter is 1
+    
+    //Once add button is clicked
+    $(addButton).click(function(){
+        //Check maximum number of input fields
+        if(x < maxField){ 
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+    
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function(e){
+        e.preventDefault();
+        $(this).parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+});
+</script> -->
 <!-- End Document
 ================================================== -->
 </body>

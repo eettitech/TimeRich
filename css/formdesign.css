@@ -278,7 +278,7 @@ select.list-dt:focus {
 
 /* When the checkbox is checked, add a blue background */
 .container_check input:checked ~ .checkmark {
-  background-color: #a6990d;
+  background-color:#a6990d;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
