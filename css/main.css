@@ -837,12 +837,12 @@ textarea.custom-input {
 
 .field textarea {
   resize: none;
-  height: 150px;
+  /*height: 150px;*/
 }
 
 @media (min-width: 1200px) {
   .field textarea {
-    height: 209px;
+    /*height: 209px;*/
   }
 }
 
@@ -15549,7 +15549,7 @@ textarea.custom-input {
 
 @media (min-width: 992px) {
   .contacts__contact {
-    /*padding: 60px;*/
+    padding: 60px;
     margin: 40px;
   }
 }
