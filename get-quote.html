@@ -24,7 +24,7 @@
 
 	<!-- For Form -->
 	<link rel="stylesheet" href="css/formdesign.css"/>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 	
       <!-- font awesome  -->
@@ -33,6 +33,11 @@
 
     <!-- <script src="static/js/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- CuntryCode DropDown -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
 
 		
 	<!-- Favicons
@@ -111,20 +116,32 @@
                                 </div>
                                 </div> -->
 
-                                    <input type="text" name="fname" placeholder="Name*" /> 
-                                    <input type="text" name="lname" placeholder="Title*" /> 
-                                    <input type="text" name="phno" placeholder="Company Name*" /> 
-                                    <div class="w3-row">
-                                  <div class="w3-col" style="width:150px">
-                                    <input type="text" name="phno_2" placeholder="Country Code*" /></div>
-                                  <div class="w3-rest w3-container">
-                                    <input type="text" name="phno_2" placeholder="Contact Number*" /></div>
-                                </div>
-                                    <input type="email" name="email" placeholder="Email Id*" />
-                                    <!-- <input type="text" name="ayou" placeholder="Are You*" />  -->
+                              <input type="text" name="fname" placeholder="Name*" /> 
+                              <!-- <input type="text" name="lname" placeholder="Title*" />  -->
+                              <input type="text" name="phno" placeholder="Company*" /> 
+                              <input type="email" name="email" placeholder="Email Id*"/>
 
+                                <div class="w3-row">
+                                  <!-- <p>Contact</p> -->
+                                  <div class="w3-col">
+                                    <!-- <select id="phone" name="phone"></select> -->
+                                    <input type="tel" id="phone" style="padding: 10px; padding-left: 60px;" style="font-size:16px;  border-radius: 5px; margin-bottom: 15px;" placeholder="999 999 1234" />
+
+                                     <select class="form-select" style="font-size:16px; padding: 10px; background: rgba(0,0,0,.1);    border-bottom: 1px solid #ccc;  border-radius: 5px;" aria-label="Default select example">
+                                      <option selected>Are You*</option>
+                                      <option value="1">Manufacturer</option>
+                                      <option value="2">Freight Forwarder</option>
+                                      <option value="3">Exporter</option>
+                                      <option value="4">Importer</option>
+                                      <option value="5">Agent</option>
+                                      <option value="6">Individual</option>
+                                      <option value="7">Other</option>
+                                    </select>
+                                  </div>
+                                 
+                                </div>
                                                                 
-                                    <select class="form-select" style="font-size:16px; padding: 10px; background: rgba(0,0,0,.1);    border-bottom: 1px solid #ccc;  border-radius: 5px;" aria-label="Default select example">
+                                <!-- <select class="form-select" style="font-size:16px; padding: 10px; background: rgba(0,0,0,.1);    border-bottom: 1px solid #ccc;  border-radius: 5px;" aria-label="Default select example">
                                       <option selected>Are You*</option>
                                       <option value="1">Manufacturer</option>
                                       <option value="2">Freight Forwarder</option>
@@ -133,7 +150,7 @@
                                       <option value="2">Agent</option>
                                       <option value="3">Individual</option>
                                       <option value="1">Other</option>
-                                    </select>
+                                    </select> -->
 
                             
                                 </div> 
@@ -539,6 +556,18 @@ $(document).ready(function(){
     });
 });
 </script>
+
+
+<!-- CountryCode -->
+<!-- Initialise the library -->
+<script>
+  var input = document.querySelector("#phone");
+  window.intlTelInput(input, {
+    // utilsScript is useful for providing validation and pretty formatting
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.min.js",
+  });
+</script>
+
 
 <!-- <script type="text/javascript">
 $(document).ready(function(){
