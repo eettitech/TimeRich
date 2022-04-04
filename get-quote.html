@@ -128,7 +128,7 @@
                                     <input type="tel" id="phone" style="padding: 10px; padding-left: 60px;" style="font-size:16px;  border-radius: 5px; margin-bottom: 15px;" placeholder="999 999 1234" />
 
                                      <select class="form-select" style="font-size:16px; padding: 10px; background: rgba(0,0,0,.1);    border-bottom: 1px solid #ccc;  border-radius: 5px;" aria-label="Default select example">
-                                      <option selected>Are You*</option>
+                                      <option disabled selected>Are You*</option>
                                       <option value="1">Manufacturer</option>
                                       <option value="2">Freight Forwarder</option>
                                       <option value="3">Exporter</option>
@@ -141,18 +141,6 @@
                                  
                                 </div>
                                                                 
-                                <!-- <select class="form-select" style="font-size:16px; padding: 10px; background: rgba(0,0,0,.1);    border-bottom: 1px solid #ccc;  border-radius: 5px;" aria-label="Default select example">
-                                      <option selected>Are You*</option>
-                                      <option value="1">Manufacturer</option>
-                                      <option value="2">Freight Forwarder</option>
-                                      <option value="3">Exporter</option>
-                                      <option value="1">Importer</option>
-                                      <option value="2">Agent</option>
-                                      <option value="3">Individual</option>
-                                      <option value="1">Other</option>
-                                    </select> -->
-
-                            
                                 </div> 
                               	  <input type="button" name="next" class="next action-button" value="Next Step" />
                             </fieldset>
@@ -162,14 +150,53 @@
 
                                  
 
-                                    <h4 class="fs-title">Service Needed</h4> 
+                                <h4 class="fs-title">Service Needed</h4> 
 
-                                    <p>Please Select The Type of Service*</p>
-                                    <select class="form-select" style="font-size:16px; padding: 10px; background: rgba(0,0,0,.1);    border-bottom: 1px solid #ccc;  border-radius: 5px;" aria-label="Default select example">
-                                      <option selected>Select</option>
+                                <p>Please Select The Type of Service*</p>
+                                <div class="w3-row" style="margin-bottom: 10px;">
+                                  <!-- <p>Contact</p> -->
+                                  <div class="w3-col">
+                                    <!-- <select id="phone" name="phone"></select> -->
+                                    
+                                    <select  class="form-select" style="width: 150px; font-size:16px; padding: 10px; background: rgba(0,0,0,.1); border-bottom: 1px solid #ccc;  border-radius: 5px;" aria-label="Default select example">
+                                      
+                                      <option disabled selected >Select</option>
+                                      <option value="1">Import</option>
+                                      <option value="2">Export</option>                         
+                                    </select>
+
+                                    <select id="ShipAir" class="form-select" style="width: 150px; font-size:16px; padding: 10px; background: rgba(0,0,0,.1);    border-bottom: 1px solid #ccc;  border-radius: 5px;" aria-label="Default select example">
+                                      <option disabled selected>Select</option>
                                       <option value="1">Ship</option>
                                       <option value="2">Air</option>                      
                                     </select>
+                                  </div>
+                                </div>
+
+                                <div id="MyDiv" hidden>
+                                <p>Terms Of Shipment</p>
+                                <div class="w3-row" style="margin-bottom: 10px;">
+                                  <!-- <p>Contact</p> -->
+                                  <div class="w3-col">
+                                    <!-- <select id="phone" name="phone"></select> -->
+                                      <select class="form-select" style="width: 150px; font-size:16px; padding: 10px; background: rgba(0,0,0,.1);  marigen: 100px;   border-bottom: 1px solid #ccc;  border-radius: 5px;" aria-label="Default select example">
+                                      
+                                      <option disabled selected>Select</option>
+                                      <option value="1">20ft</option>
+                                      <option value="2">40ft</option>
+                                      <option value="2">LCL</option>                         
+                                    </select>
+
+                                    <select class="form-select" style="width: 150px; font-size:16px; padding: 10px; background: rgba(0,0,0,.1);    border-bottom: 1px solid #ccc;  border-radius: 5px;" aria-label="Default select example">
+                                      <option disabled selected>Select</option>
+                                      <option value="1">Ex-Works</option>
+                                      <option value="2">FOB</option>
+                                      <option value="2">CIF</option>                      
+                                    </select>
+                                  </div>
+                                </div>
+                                </div>
+                                    
 
                                     <p>Service Needed (check all that apply) *</p>
                                     <div class="row_checks" style="background: rgba(0,0,0,.1); border-radius: 5px;margin-bottom: 10px;">
@@ -605,6 +632,19 @@ $(document).ready(function(){
 });
 </script> -->
 <!-- End Document
-================================================== -->
+<================================================== -->
+<script>
+    $(document).ready(function() {
+        $("#ShipAir").change(function () {
+            if ($(this).val() == 2) {
+                $("#MyDiv").hide();
+            } else {
+                $("#MyDiv").show();
+
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
