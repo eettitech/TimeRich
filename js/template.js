@@ -81,9 +81,11 @@ $(document).ready(function(){
 			if( $("ul#menu li").css('display') != 'inline' ){
 				if($("ul#menu").hasClass('showmenu')) {
         			$("ul#menu").removeClass('showmenu');
+					$("ul#menu > li").removeClass('open-hide');
 					$("ul#menu li").css('display','none');
     			} else {
 					$("ul#menu").addClass('showmenu');
+					$("ul#menu > li").addClass('open-hide');
         			$("ul#menu li").css('display','block');
     			}
 			}

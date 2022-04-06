@@ -807,27 +807,77 @@
 	}
 	
 	#navigation ul {
-		width: 250px;
+		width: 50px;
 		padding: 5px 0;
 		position: relative;
 		top: 10px;
 		right: 50px;
 		border: solid 1px #efefef;
-		background: #fff url(../images/icon-menu.png) no-repeat 10px 11px;
+		/*background: #fff url(../images/icon-menu.png) no-repeat 10px 11px;*/
 		border-radius: 3px;	
 	}
 	.logo {
 		margin-top:10px;
-	}	
+	}
+	.visible-xs {
+		display: block;
+	}
+	ul#menu {
+		border: none !important;
+    background: none !important;
+	}
+	ul#menu.showmenu {
+		position: fixed !important;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 90%;
+		height: 95%;
+		border: solid 1px #efefef !important;
+    background: #fff !important;
+    text-align: center;
+    padding:  5%;
+	}
+	ul#menu .fa-times {
+		display: none;
+	}
+	ul#menu .fa-bars {
+		display: block;
+	}
+	ul#menu.showmenu .fa-times {
+		display: block;
+	}
+	ul#menu.showmenu .fa-bars {
+		display: none;
+	}
+	.bx-wrapper {
+		width: 80%;
+		margin: auto;
+	}
+	.open-hide {
+		display: none;
+	}
+	#force-display {
+		display: block !important;
+	}
 	ul#menu li {
 		display: none;
 		margin: 0;
+		line-height: 36px;
+	}
+	ul#menu a {
+		text-align: center;
+		font-size: 26px;
+	}
+	ul#menu.showmenu a{
+		font-size: 22px;
 	}
 	
-	#navigation .current {
+	/*#navigation .current {
 		color: #a6990d !important;
 		display: block!important;
-	}
+	}*/
 	
 	#navigation a {
 		display: block;
@@ -840,26 +890,29 @@
 		background-image: none;
 	}
 		
-	#navigation ul:hover .current {
+	/*#navigation ul:hover .current {
 		background: url(../images/icon-check.png) no-repeat 10px 7px;
-	}
+	}*/
 
-	#navigation ul li:hover a, #navigation ul li.current a {
+	/*#navigation ul li:hover a, #navigation ul li.current a {
 		color: #999;
 		border-bottom:: 0px;
-	}
+	}*/
 	
 	#navigation a, #navigation a:active, #navigation a:visited {
 		padding-top:5px;
 		height:auto;		
 		padding-bottom:5px;
 	}	
-	#navigation ul li.current a {
+	/*#navigation ul li.current a {
 		color: #999;
 		border-bottom: 1px solid #999;
 		background: url(../images/ar.png) no-repeat bottom center;
-	}
-}	
+	}*/
+}
+.visible-xs {
+	display: none !important;
+}
 @media only screen and (max-width: 767px) {
 	.logo{
 		margin-left:10px;
@@ -869,13 +922,13 @@
 	}
 	
 	#navigation ul {
-		width: 200px;
+		width: 50px;
 		padding: 5px 0;
 		position: relative;
 		top: 10px;
 		right: 20px;
 		border: solid 1px #efefef;
-		background: #fff url(../images/icon-menu.png) no-repeat 10px 11px;
+		/*background: #fff url(../images/icon-menu.png) no-repeat 10px 11px;*/
 		border-radius: 3px;		
 	}
 	
@@ -884,9 +937,9 @@
 		margin: 0;
 	}
 	
-	#navigation .current {
+	/*#navigation .current {
 		display: block!important;
-	}
+	}*/
 	
 	#navigation a {
 		display: block;
@@ -898,9 +951,9 @@
 		background-image: none;
 	}
 		
-	#navigation ul:hover .current {
+	/*#navigation ul:hover .current {
 		background: url(../images/icon-check.png) no-repeat 10px 7px;
-	}
+	}*/
 
 	#navigation ul li:hover a, #navigation ul li.current a {
 		border-bottom:: 0px;
@@ -923,13 +976,13 @@
 	}
 	
 	#navigation ul {
-		width: 120px;
+		width: 50px;
 		padding: 5px 0;
 		position: relative;
 		top: 10px;
 		right: 10px;
 		border: solid 1px #efefef;
-		background: #fff url(../images/icon-menu.png) no-repeat 10px 11px;
+		/*background: #fff url(../images/icon-menu.png) no-repeat 10px 11px;*/
 		border-radius: 3px;
 	}
 	
@@ -938,9 +991,9 @@
 		margin: 0;
 	}
 	
-	#navigation .current {
+	/*#navigation .current {
 		display: block!important;
-	}
+	}*/
 	
 	#navigation a {
 		display: block;
@@ -952,13 +1005,13 @@
 		background-image: none;
 	}
 	
-	#navigation ul:hover .current {
+	/*#navigation ul:hover .current {
 		background: url(../images/icon-check.png) no-repeat 10px 7px;
-	}
+	}*/
 
-	#navigation ul li:hover a, #navigation ul li.current a {
+	/*#navigation ul li:hover a, #navigation ul li.current a {
 		border-top: 0px;
-	}
+	}*/
 	
 	#navigation a, #navigation a:active, #navigation a:visited {
 		padding-top:5px;
@@ -1411,9 +1464,9 @@
 	margin: 0 auto;
 	width: 100%;
 	margin-top:4px;
-	background: url('../images/team1.jpg') no-repeat top center;
+	/*background: url('../images/team1.jpg') no-repeat top center;*/
 	background-size:cover;	
-	height:500px;
+	/*height:500px;*/
 	overflow:hidden;
 }
 .team2{
