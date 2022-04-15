@@ -78,7 +78,7 @@ $(document).ready(function(){
 		$("#navigation").sticky({topSpacing:0});
 		
 		$("ul#menu").click(function(){
-			if( $("ul#menu li").css('display') != 'inline' ){
+			if( ($("ul#menu li").css('display') != 'inline') && ($(window).width() < 960) ){
 				if($("ul#menu").hasClass('showmenu')) {
         			$("ul#menu").removeClass('showmenu');
 					$("ul#menu > li").removeClass('open-hide');

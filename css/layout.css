@@ -804,6 +804,14 @@
 		color: #857b15;
 	}
 	
+
+	.visible-xs {
+		display: none !important;
+	}
+	.hidden-xs {
+		display: block !important;
+	}
+
 @media only screen and (max-width: 959px) {
 	#navigation a, #navigation a:active, #navigation a:visited {
 		color:#4f4f4f;
@@ -823,7 +831,10 @@
 		margin-top:10px;
 	}
 	.visible-xs {
-		display: block;
+		display: block !important;
+	}
+	.hidden-xs {
+		display: none !important;
 	}
 	ul#menu {
 		border: none !important;
@@ -912,9 +923,6 @@
 		border-bottom: 1px solid #999;
 		background: url(../images/ar.png) no-repeat bottom center;
 	}*/
-}
-.visible-xs {
-	display: none !important;
 }
 @media only screen and (max-width: 767px) {
 	.logo{
@@ -2748,10 +2756,10 @@ a.link-blog:hover{
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
 	#video_back video{
-		display: none;
-	}
-	#video_back .overlay_image video{
 		display: block;
+	}
+	#video_back .overlay_image{
+		display: none;
 	}
 	h1 { font-size: 25px; line-height:27px;}
 #profile .title .angle  h1,
