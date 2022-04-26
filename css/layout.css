@@ -597,9 +597,10 @@
 	left:50%;
 	margin-left:-480px;
 	background:rgba(38,38,38,.9);
-	top:50%;
+	top: 0;
+	/*top:50%;*/
 	z-index:5;
-	margin-top:-340px;
+	/*margin-top:-340px;*/
 	padding-top:30px;
 	padding-bottom:30px;
 }		
