@@ -152,7 +152,7 @@
 
                                 <h4 class="fs-title">Service Needed</h4> 
 
-                                <p>Please Select The Type of Service*</p>
+                                <p style="color: black;">Please Select The Type of Service*</p>
                                 <div class="w3-row" style="margin-bottom: 10px;">
                                   <!-- <p>Contact</p> -->
                                   <div class="w3-col">
@@ -174,7 +174,7 @@
                                 </div>
 
                                 <div id="MyDiv" hidden>
-                                <p>Terms Of Shipment</p>
+                                <p style="color: black;">Terms Of Shipment</p>
                                 <div class="w3-row" style="margin-bottom: 10px;">
                                   <!-- <p>Contact</p> -->
                                   <div class="w3-col">
@@ -182,9 +182,16 @@
                                       <select class="form-select" style="width: 150px; font-size:16px; padding: 10px; background: rgba(0,0,0,.1);  marigen: 100px;   border-bottom: 1px solid #ccc;  border-radius: 5px;" aria-label="Default select example">
                                       
                                       <option disabled selected>Select</option>
-                                      <option value="1">20ft</option>
-                                      <option value="2">40ft</option>
-                                      <option value="2">LCL</option>                         
+                                      <option value="1">20GP</option>
+                                      <option value="2">40GP</option>
+                                      <option value="2">20HD</option> 
+                                      <option value="2">40HD</option>
+                                      <option value="2">20OT</option> 
+                                      <option value="2">40OT</option>
+                                      <option value="2">20 FLAT RACK</option> 
+                                      <option value="2">40 FLAT RACK</option>
+                                      <option value="2">LCL</option>
+                                                              
                                     </select>
 
                                     <select class="form-select" style="width: 150px; font-size:16px; padding: 10px; background: rgba(0,0,0,.1);    border-bottom: 1px solid #ccc;  border-radius: 5px;" aria-label="Default select example">
@@ -198,7 +205,7 @@
                                 </div>
                                     
 
-                                    <p>Service Needed (check all that apply) *</p>
+                                    <p style="color: black;">Service Needed (check all that apply) *</p>
                                     <div class="row_checks" style="background: rgba(0,0,0,.1); border-radius: 5px;margin-bottom: 10px;">
                                       <div class="column_checks">
                                         <label class="container_check">Intl Freight Forwarding
@@ -246,7 +253,7 @@
                                       </div>
                                     </div>
 
-                                    <p>Package Information * please select</p>
+                                    <p style="color: black;">Package Information * please select</p>
                                     <div class="row_checks" style="background: rgba(0,0,0,.1); border-radius: 5px; margin-bottom: 10px;">
                                       <div class="column_checks">
                                         <label class="container_radio">Unpacked
@@ -330,12 +337,12 @@
 							<fieldset>
                             <div class="form-card">
                                     <h4 class="fs-title">PACKAGE INFORMATION</h4> 
-                                    <p>Commodity</p>
+                                    <p style="color: black;">Commodity</p>
                                     <input type="text" name="fname" placeholder="Description of Commodity*" />  
 
                                 <div class="row_checks">
                                     <div class="column_checks">
-                                        <p>Weight*</p>
+                                        <p style="color: black;">Weight*</p>
                                         <label class="container_radio">Pounds
                                           <input type="radio"  name="radio_weight">
                                           <span class="checkmark_radio"></span>
@@ -352,7 +359,7 @@
 
 
                                     <div class="column_checks">
-                                        <p>Hazardous / MCO *</p>
+                                        <p style="color: black;">Hazardous / MCO *</p>
                                         <input style="padding: 10px;font-size: 12px;" type="text" name="othertype" placeholder="If yes, Specify Its Nature*" />
                                         
                                     </div>
@@ -372,7 +379,7 @@
                                 <div class="row_checks">
                                     <div class="w3-row">
                                         <div class="w3-col" style="width:100px">
-                                            <p>Dimensions*</p>
+                                            <p style="color: black;">Dimensions*</p>
                                         </div>
                                         <div class="w3-col" style="width:100px">
                                             <label class="container_radio">Inches
@@ -412,7 +419,7 @@
                                 </div>
 
                                     <!-- <p>Commodity</p> -->
-                                    <input type="text" name="fname" placeholder="Total Invoice Value" /> 
+                                    <!-- <input type="text" name="fname" placeholder="Total Invoice Value" />  -->
 
                                     </div>
                             </div>
@@ -444,7 +451,7 @@
 
                             <fieldset>
                                 <div class="form-card">
-                                    <h4>Location & Submit</h4>
+                                    <h4>Location</h4>
                                     <div class="w3-row">
                                       <div class="w3-col" style="width:50%">
                                         <input type="text" name="phno_2" placeholder="Originating Port & Country*" /></div>
@@ -454,9 +461,9 @@
 
                                     <div class="w3-row">
                                       <div class="w3-col" style="width:50%">
-                                        <input type="text" name="phno_2" placeholder="Collecting point*" /></div>
+                                        <input type="text" name="phno_2" placeholder="Collecting point & Zipcode*" /></div>
                                       <div class="w3-rest w3-container">
-                                        <input type="text" name="phno_2" placeholder="Delivery Point*" /></div>
+                                        <input type="text" name="phno_2" placeholder="Delivery Point & Zipcode*" /></div>
                                     </div>
 
                                     <div class="w3-row">
@@ -479,7 +486,7 @@
                                         </div>
                                     </div> -->
                                 </div>
-                                <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Confirm" />
+                                <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Submit" />
                             </fieldset>
 
 
@@ -516,7 +523,7 @@
 				</div>
 				<div class="one-third column cbp-so-side cbp-so-side-right">
 					<h5>Email:</h5>
-					<p>Support: <a href="mailto:palani@timerich.in" title="mailto:palani@timerich.in">palani@timerich.in</a></p>
+					<p>Support: <a href="mailto:info@timerich.in" title="mailto:info@timerich.in">info@timerich.in</a></p>
 					<!-- <p>Director: <a href="mailto:chief@example.com" title="mailto:chief@example.com">chief@example.com</a></p> -->
 				</div>
 			</section>

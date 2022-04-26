@@ -597,10 +597,11 @@
 	left:50%;
 	margin-left:-480px;
 	background:rgba(38,38,38,.9);
-	top: 0;
-	/*top:50%;*/
+	/*top: 0;*/
+	top:50%;
 	z-index:5;
 	/*margin-top:-340px;*/
+	margin-top:-285px;
 	padding-top:30px;
 	padding-bottom:30px;
 }		
@@ -733,7 +734,8 @@
 	width:100%;
 	margin:0;
 	padding:0;
-	height:100px;
+	/*height:100px;*/
+	height:50px;
 	text-indent:-8000px;
 	display:block;
 	background: rgba(38,38,38,.1) url('../images/arrow-down.png') no-repeat center center;
@@ -1148,6 +1150,15 @@
 	background:  url(../images/classy_fabric.png) repeat;
 	border-radius:5px;
 	padding-top:20px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:30px;
+	box-shadow: 0 2px 7px rgba(0,0,0,.4);
+}
+.profile-proces_history{
+	position:relative;
+	background:  url(../images/classy_fabric.png) repeat;
+	border-radius:25px;	
 	padding-left:20px;
 	padding-right:20px;
 	padding-bottom:30px;

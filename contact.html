@@ -205,8 +205,8 @@
              <address class="contact-block__address">New No.64, old No. 83/84, 3rd Floor (Rear side),
       				Next to R.R.Pharmaceuticals, Moore Street,
       				Chennai 600001. India</address>
-           <div class="contact-block__phone">
-              <span class="contact-block__hint">Email:</span>
+           <div class="contact-block__phone" style="margin-top: 25px;">
+              <span class="contact-block__hint" >Email:</span>
               <a href="mailto:info@timerich.in">info@timerich.in</a>
             </div>
             <!-- <div class="contact-block__phone">
@@ -214,10 +214,10 @@
               <a href="tel:+86631250859">+91 44 4511 8484</a>
             </div> -->
             <div class="contact-block__offices">
-              <span class="contact-block__hint">Our Branches are Available at:</span>
+              <span class="contact-block__hint" >Our Branches at:</span>
               <address class="contact-block__address">
           <!-- <p><a href="tel:+86631250859">+91 80412 58809</a></p> -->
-                  <p><h6 style="font-weight: bold;">BANGALORE - MUMBAI  - KOLKATA</h6></p>
+                  <p><h7 style="font-weight: bold; color: black;">CHENNAI - BANGALORE - MUMBAI  - KOLKATA</h6></p>
                   <!-- <p><a>MUMBAI</a></p> -->
                   <!-- <p><a>KOLKATA</a></p> -->
                 </address>
@@ -251,10 +251,22 @@
                   <span class="field__hint">Email Address</span>
                 </label>
                 <div class="field-error" style="display: none"></div>
-                <label class="contacts__modal-field field field--md-small">
+                <!-- <label class="contacts__modal-field field field--md-small">
                   <input style="color: #000;" type="text" name="subject" placeholder="Subject (optional)">
                   <span class="field__hint">Subject (optional)</span>
-                </label>
+                </label> -->
+                <select class="form-select contacts__modal-field field field--md-small" style="font-size:16px; padding: 10px; background: rgba(0,0,0,.1);    border-bottom: 1px solid #ccc;  border-radius: 5px;" aria-label="Default select example">
+                                      <option disabled selected>Looking For*</option>
+                                      <option value="1">INTERNATIONAL FREIGHT FORWARDING</option>
+                                      <option value="2">CUSTOMS CLEARENCE</option>
+                                      <option value="3">WAREHOUSE</option>
+                                      <option value="4">TRANSPORT</option>
+                                      <option value="5">DOOR TO DOOR</option>
+                                      <option value="6">SUPPLY CHAIN</option>
+                                      <option value="7">MARINE INSURANCE</option>
+                                      <option value="7">CROSS TRADE</option>
+                                      <option value="7">OTHER ALLIED SERVICES</option>
+                                    </select>
                 <div class="field-error" style="display: none"></div>
                 <label class="contacts__modal-field field field--md-small">
                   <textarea style="color: #000;" name="message" placeholder="Message"></textarea>
