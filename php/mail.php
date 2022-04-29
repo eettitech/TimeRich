@@ -7,10 +7,15 @@ require '../js/mailer/Exception.php';
 require '../js/mailer/PHPMailer.php';
 require '../js/mailer/SMTP.php';
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$subject = $_POST['subject'];
-$message = $_POST['message'];
+// $name = $_POST['name'];
+// $email = $_POST['email'];
+// $subject = $_POST['subject'];
+// $message = $_POST['message'];
+
+$name = preg_replace('/[^-a-zA-Z0-9_ ]/', '', $_POST['name']);
+$email = preg_replace('/[^-a-zA-Z0-9_@.]/', '', $_POST['email']);
+$subject = preg_replace('/[^-a-zA-Z0-9_ ]/', '', $_POST['subject']);
+$message = preg_replace('/[^-a-zA-Z0-9_ ]/', '', $_POST['message']);
 
 try {
 	$mail = new PHPMailer();
@@ -18,9 +23,9 @@ try {
 	$mail->CharSet = "UTF-8";
 	$mail->SMTPAuth = true;
 
-	$mail->Host = 'Your host';
-	$mail->Username = 'Your username';
-	$mail->Password = 'Your pass';
+	$mail->Host = 'smtp.gmail.com';
+	$mail->Username = 'timerich.service@gmail.com';
+	$mail->Password = 'TimeRich@321';
     $mail->SMTPOptions = array(
      'ssl' => array(
          'verify_peer' => false,
@@ -28,14 +33,15 @@ try {
          'allow_self_signed' => true
      )
 );
-	$mail->Port = 587;
-	$mail->setFrom('address1', 'Liarch');
+	// $mail->Port = 587;
+	$mail->Port = 993;
+	$mail->setFrom('timerich.service@gmail.com', 'Time Rich');
 
-	$mail->addAddress('address2');
+	$mail->addAddress('timerich.service@gmail.com', 'Time Rich');
 
 	$mail->isHTML(true);
-	$mail->Subject = 'Message from Liarch';
-	$mail->Body = 'Client name - ' . $name . '<br>' . 'Email - ' . $email . '<br>' . 'Subject - ' . $subject . '<br>' . 'Message - ' . $message;
+	$mail->Subject = 'Get In Touch Form';
+	$mail->Body = 'Client name - ' . $name . '<br>' . 'Email - ' . $email . '<br>' . 'Looking For - ' . $subject . '<br>' . 'Message - ' . $message;
 	$mail->send();
 } catch (Exception $e) {
     echo $mail->ErrorInfo;
