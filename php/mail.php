@@ -33,8 +33,8 @@ try {
          'allow_self_signed' => true
      )
 );
-	// $mail->Port = 587;
-	$mail->Port = 993;
+	$mail->Port = 587;
+	// $mail->Port = 993;
 	$mail->setFrom('timerich.service@gmail.com', 'Time Rich');
 
 	$mail->addAddress('timerich.service@gmail.com', 'Time Rich');
