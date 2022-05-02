@@ -32,17 +32,18 @@ try {
          'verify_peer_name' => false,
          'allow_self_signed' => true
      )
-);
+ );
 	$mail->Port = 587;
 	// $mail->Port = 993;
 	$mail->setFrom('timerich.service@gmail.com', 'Time Rich');
 
-	$mail->addAddress('timerich.service@gmail.com', 'Time Rich');
+	$mail->addAddress('timerich.service@gmail.com');
 
 	$mail->isHTML(true);
 	$mail->Subject = 'Get In Touch Form';
 	$mail->Body = 'Client name - ' . $name . '<br>' . 'Email - ' . $email . '<br>' . 'Looking For - ' . $subject . '<br>' . 'Message - ' . $message;
-	$mail->send();
+	echo $mail->send();
 } catch (Exception $e) {
+	echo("error");
     echo $mail->ErrorInfo;
 }

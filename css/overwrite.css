@@ -1,0 +1,18 @@
+.home-text {
+	background: rgba(240,240,240,.8);
+}
+.line {
+	background: #444;
+    width: 25%;
+    margin: auto;
+}
+.home-text-middle, .home-text-bottom {
+	color: #444;
+}
+#home a {
+	color: #444;
+	font-weight: 600;
+}
+.cl-effect-18 a::before, .cl-effect-18 a::after {
+	background: #444;
+}
