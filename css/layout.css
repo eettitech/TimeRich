@@ -998,6 +998,19 @@
 		/*background: #fff url(../images/icon-menu.png) no-repeat 10px 11px;*/
 		border-radius: 3px;
 	}
+
+	#menu.showmenu {
+		margin-right: 0;
+		top: 0;
+		right: 0;
+		font-size: 14px;
+    padding: 0;
+	}
+
+	ul#menu.showmenu a {
+		font-size: 14px;
+		padding:  0;
+	}
 	
 	ul#menu li {
 		display: none;
