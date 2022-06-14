@@ -27,8 +27,7 @@
 	<link rel="stylesheet" href="css/formdesign.css"/>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-	
-      <!-- font awesome  -->
+    <!-- font awesome  -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
     <link rel="stylesheet" href="static/css/AdminLTE.min.css" />
 
@@ -47,6 +46,11 @@
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+  <style type="text/css">
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body >
 	<nav id="navigation" style="position: fixed">
@@ -84,13 +88,13 @@
 		<!-- MultiStep Form -->
 <div class="container-fluid" id="grad1"  style="padding-top: 100px;">
     <div class="row justify-content-center mt-0">
-        <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+        <div class="col-11 col-sm-9 col-md-7 col-lg-12 text-center p-0 mt-3 mb-2">
             <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
                 <h4><strong>Get Quote</strong></h4>
                 <p>Fill all form field to go to next step</p>
                 <div class="row">
                     <div class="col-md-12 mx-0">
-                        <form id="msform">
+                        <form id="msform" action="/" data-remote="true">
                             <!-- progressbar -->
                             <ul id="progressbar">
                             	<li class="active" id="personal"><strong>General</strong></li>
@@ -426,8 +430,8 @@
                             </div>
 
                                 <!-- copy of input fields group -->
-                                <div class="row_checks form-group fieldGroupCopy" style="display: none;">
-                                    <div class="input-group">
+                                <div class="form-group fieldGroupCopy" style="display: none;">
+                                    <div class="row_checks input-group">
                                         <div class="column_checks">
                                         <input type="text" name="length[]" class="form-control" placeholder="Enter Length"/>
                                         </div>
@@ -455,15 +459,23 @@
                                     <h4>Location</h4>
                                     <div class="w3-row">
                                       <div class="w3-col" style="width:50%">
-                                        <input type="text" name="phno_2" placeholder="Originating Port*" /></div>
+                                        <input type="text" name="phno_2" list="origin_country" placeholder="Originating Country*" />
+                                        <datalist id="origin_country"></datalist>
+                                      </div>
                                       <div class="w3-rest w3-container">
-                                        <input type="text" name="phno_2" placeholder="Destination Port*" /></div>
+                                        <input type="text" name="phno_2" list="dest_country" placeholder="Destination Country*" />
+                                        <datalist id="dest_country"></datalist>
+                                      </div>
                                     </div>
                                     <div class="w3-row">
                                       <div class="w3-col" style="width:50%">
-                                        <input type="text" name="phno_2" placeholder="Originating Country*" /></div>
+                                        <input type="text" name="phno_2" list="origin_port" placeholder="Originating Port*" />
+                                        <datalist id="origin_port"></datalist>
+                                      </div>
                                       <div class="w3-rest w3-container">
-                                        <input type="text" name="phno_2" placeholder="Destination Country*" /></div>
+                                        <input type="text" name="phno_2" list="dest_port" placeholder="Destination Port*" />
+                                        <datalist id="dest_port"></datalist>
+                                      </div>
                                     </div>
 
                                     <div class="w3-row">
@@ -493,7 +505,7 @@
                                         </div>
                                     </div> -->
                                 </div>
-                                <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Submit" />
+                                <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="submit" name="make_payment" class="next action-button" value="Submit" />
                             </fieldset>
 
 
@@ -513,7 +525,7 @@
 
 
 
-	<div class="background-pat1-l">	
+	<div class="background-pat1-l hidden">	
 		<div class="contact-info">
 			<div class="container">
 			<section class="cbp-so-section">
@@ -649,14 +661,42 @@ $(document).ready(function(){
 <================================================== -->
 <script>
     $(document).ready(function() {
-        $("#ShipAir").change(function () {
-            if ($(this).val() == 2) {
-                $("#MyDiv").hide();
-            } else {
-                $("#MyDiv").show();
+      const c_ports = {
+        'india': ['chennai', 'tuticorin', 'mumbai'],
+        'china': ['port1', 'port2'],
+        'srilanka': ['s-port1', 's-port2'],
+      };
 
-            }
-        });
+      $("#ShipAir").change(function () {
+          if ($(this).val() == 2) {
+              $("#MyDiv").hide();
+          } else {
+              $("#MyDiv").show();
+
+          }
+      });
+
+      for (const [country, port] of Object.entries(c_ports)) {
+        $('#origin_country').append('<option>'+country+'</option>');
+        $('#dest_country').append('<option>'+country+'</option>');
+      }
+
+      $("input[list='origin_country']").on('change', function(event){
+        $("input[list='origin_port']").val('');
+        $('#origin_port').html('');
+        let ports = c_ports[event.target.value];
+        for (const port of ports) {
+          $('#origin_port').append('<option>'+port+'</option>');
+        }
+      });
+      $("input[list='dest_country']").on('change', function(event){
+        $("input[list='dest_port']").val('');
+        $('#dest_port').html('');
+        let ports = c_ports[event.target.value];
+        for (const port of ports) {
+          $('#dest_port').append('<option>'+port+'</option>');
+        }
+      });
     });
 </script>
 
